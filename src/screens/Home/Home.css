@@ -1,0 +1,5 @@
+.homeContainer {
+  flex: 3;
+  justify-content: center;
+  text-align: center;
+}

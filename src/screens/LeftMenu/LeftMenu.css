@@ -1,0 +1,31 @@
+.LeftMenuContainer {
+  flex: 1;
+  padding: 32px;
+  background-color: #e5e4e2;
+}
+.LeftMenuOptionContainer {
+  padding: 8px;
+  margin-top: 8px;
+}
+.LeftMenuOptionContainer:hover {
+  outline: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.circle {
+  height: 45px;
+  width: 45px;
+  background-color: #b76e79;
+  border-radius: 100%;
+}
+.menuItemContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.menuItemTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+}
