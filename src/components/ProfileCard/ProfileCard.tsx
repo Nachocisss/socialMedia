@@ -9,7 +9,7 @@ const FOLLOWING_NUMBER = 341;
 
 export function ProfileCard() {
   return (
-    <>
+    <section>
       <div className="profileBackground"></div>
       <div className="profileCardContainer">
         <div className="profileTop">
@@ -39,6 +39,6 @@ export function ProfileCard() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }

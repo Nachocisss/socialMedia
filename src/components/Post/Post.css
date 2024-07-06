@@ -1,11 +1,61 @@
 .postContainer {
+  display: flex;
+  flex-direction: row;
   background-color: white;
   margin-top: 16px;
+  padding: 16px;
 }
 .postUserToken {
-  display: flex;
-  padding: 16px;
+  flex: 1;
+}
+.userTokenContainer {
   height: 40px;
   width: 40px;
   border-radius: 9999px;
+  border: 2px solid #aa01d0;
+}
+.postContent {
+  flex: 10;
+  justify-content: start;
+  text-align: start;
+}
+.postContentTopNames {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.postUserName {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+}
+.postUserSubName {
+  font-size: 12px;
+  color: grey;
+  font-weight: 700;
+}
+.postContentDescription {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+.postContentImageContainer {
+  height: 300px;
+  width: auto;
+  border-radius: 16px;
+  margin-top: 16px;
+  background-color: rgb(189, 189, 189);
+}
+.postContentBottom {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.postContentBottomText {
+  margin-left: 4px;
+  color: gray;
+  font-size: 12px;
+  font-weight: 600;
+}
+.postContentLikeContainer {
 }
