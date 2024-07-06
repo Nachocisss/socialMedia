@@ -2,5 +2,12 @@
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  background: linear-gradient(-45deg, #5fbdec, #309ed5, #006980);
+  background: linear-gradient(
+    -45deg,
+    #008eae,
+    #2f80be,
+    #309ed5,
+    #2f80be,
+    #008eae
+  );
 }
