@@ -1,17 +1,13 @@
 import React from "react";
 import "./Post.css";
-import { FaUserCircle } from "react-icons/fa";
 import { FaThumbsUp } from "react-icons/fa";
 import { FaComments } from "react-icons/fa";
+import { UserIcon } from "../UserIcon/UserIcon";
 
 export default function Post() {
   return (
     <section className="postContainer">
-      <div className="postUserToken">
-        <div className="userTokenContainer">
-          <FaUserCircle size={40} fill="black" />
-        </div>
-      </div>
+      <UserIcon />
       <div className="postContent">
         <div className="postContentTop">
           <div className="postContentTopNames">
@@ -28,11 +24,11 @@ export default function Post() {
         </span>
         <div className="postContentImageContainer"></div>
         <div className="postContentBottom">
-          <div className="postContentLikeContainer">
+          <div>
             <FaThumbsUp fill="grey" />
             <span className="postContentBottomText">3 Likes</span>
           </div>
-          <div className="postContentLikeContainer">
+          <div>
             <FaComments fill="grey" />
             <span className="postContentBottomText">8 comentarios</span>
           </div>

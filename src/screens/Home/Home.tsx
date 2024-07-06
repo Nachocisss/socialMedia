@@ -7,6 +7,7 @@ export default function HomeScreen() {
     <div className="homeContainer">
       <ProfileCard />
       <Post />
+      <Post />
     </div>
   );
 }

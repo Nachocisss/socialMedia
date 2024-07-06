@@ -1,6 +1,6 @@
 .profileCardContainer {
-  background-color: white;
-  border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid blue;
   padding: 16px;
   padding-right: 36px;
   position: relative;

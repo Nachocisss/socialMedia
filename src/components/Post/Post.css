@@ -1,18 +1,11 @@
 .postContainer {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   margin-top: 16px;
   padding: 16px;
-}
-.postUserToken {
-  flex: 1;
-}
-.userTokenContainer {
-  height: 40px;
-  width: 40px;
-  border-radius: 9999px;
-  border: 2px solid #aa01d0;
+  border-radius: 16px;
+  border: 1px solid blue;
 }
 .postContent {
   flex: 10;
@@ -56,6 +49,4 @@
   color: gray;
   font-size: 12px;
   font-weight: 600;
-}
-.postContentLikeContainer {
 }

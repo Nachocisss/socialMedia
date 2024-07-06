@@ -1,5 +1,5 @@
-.RightMenuContainer {
-  flex: 1;
+.rightMenuContainer {
+  flex: 3;
   padding: 32px;
 }
 input {
@@ -9,9 +9,52 @@ input {
   width: 100%;
   border: 0px;
   font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 input::placeholder {
   color: white;
 }
-.RightOthersContainer {
+.rightMenuOthersContacts {
+  border-radius: 16px;
+  border: 2px solid #aa01d0;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.rightMenuOthersContactsText {
+  margin: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+}
+.contactCardContainer {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid gray;
+  justify-content: start;
+  align-items: center;
+  padding: 8px;
+}
+.contactCardContainerText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.contactCardTitle {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+.contactCardSubtitle {
+  padding-top: 2px;
+  color: gray;
+  font-size: 14px;
+  font-weight: 600;
+}
+.contactCardButton {
+  background-color: #aa01d0;
+  border-radius: 9999px;
+  height: 40px;
 }
