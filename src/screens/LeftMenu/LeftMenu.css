@@ -1,7 +1,6 @@
 .LeftMenuContainer {
   flex: 1;
   padding: 32px;
-  background-color: #e5e4e2;
 }
 .LeftMenuOptionContainer {
   padding: 8px;
@@ -15,7 +14,7 @@
 .circle {
   height: 45px;
   width: 45px;
-  background-color: #b76e79;
+  background-color: #aa01d0;
   border-radius: 100%;
 }
 .menuItemContainer {

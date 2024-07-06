@@ -1,20 +1,19 @@
 import React from "react";
 import "./LeftMenu.css";
-import { MenuItem } from "../../components/menuItem/MenuItem";
-import { FaBeer } from "react-icons/fa";
+import { FaHashtag } from "react-icons/fa";
 
 const options = [
   {
     title: "Option 1",
-    icon: <FaBeer fill="black" />,
+    icon: <FaHashtag size={25} fill="black" />,
   },
   {
     title: "Option 2",
-    icon: <FaBeer fill="black" />,
+    icon: <FaHashtag size={25} fill="black" />,
   },
   {
     title: "Option 3",
-    icon: <FaBeer fill="black" />,
+    icon: <FaHashtag size={25} fill="black" />,
   },
 ];
 export default function LeftMenu() {

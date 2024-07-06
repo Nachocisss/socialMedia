@@ -4,11 +4,14 @@
 }
 input {
   background-color: rgb(78, 109, 140);
-  border-radius: 8px;
-  padding: 8px;
+  border-radius: 24px;
+  padding: 14px;
   width: 100%;
   border: 0px;
+  font-size: 16px;
 }
 input::placeholder {
   color: white;
+}
+.RightOthersContainer {
 }
