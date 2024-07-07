@@ -26,7 +26,7 @@ export function RightMenu() {
     <aside className="rightMenuContainer">
       <input type="text" placeholder="Search" />
       <div className="rightMenuOthersContacts">
-        <span className="rightMenuOthersContactsText">Otros Contactos</span>
+        <span className="rightMenuOthersContactsText">Other Users</span>
         {contactsData.map((c) => {
           return contactCard(c);
         })}

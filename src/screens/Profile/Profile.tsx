@@ -1,7 +1,8 @@
 import React from "react";
-import "./Home.css";
+import "./Profile.css";
+import { ProfileCard } from "../../components/ProfileCard/ProfileCard";
 import Post from "../../components/Post/Post";
-export default function HomeScreen() {
+export default function ProfileScreen() {
   const postContentLorem =
     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor minima reiciendis, repellendus modi sequi sit ullam impedit laborum quod, ab corrupti itaque sapiente cupiditate necessitatibus nulla eos! Illo, blanditiis minus!";
 
@@ -24,7 +25,8 @@ export default function HomeScreen() {
     },
   ];
   return (
-    <div className="homeContainer">
+    <div className="profileContainer">
+      <ProfileCard />
       {postsData.map((p, index) => {
         return <Post key={`post${index}`} {...p} />;
       })}
