@@ -21,7 +21,9 @@ export default function Post({
   content,
   likes,
   comments,
+  image,
 }: Props) {
+  console.log(image ?? "");
   return (
     <section className="postContainer">
       <UserIcon />
@@ -34,7 +36,7 @@ export default function Post({
           <span className="postUserSubName"> {date}</span>
         </div>
         <span className="postContentDescription">{content}</span>
-        <div className="postContentImageContainer"></div>
+        {image ? <div className="postContentImageContainer"></div> : null}
         <div className="postContentBottom">
           <div>
             <FaThumbsUp fill="grey" />

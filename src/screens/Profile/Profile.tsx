@@ -14,6 +14,7 @@ export default function ProfileScreen() {
       content: postContentLorem,
       likes: "4",
       comments: "2",
+      image: "somePath",
     },
     {
       username: "Jack Leli",
