@@ -4,33 +4,47 @@ import { FaThumbsUp } from "react-icons/fa";
 import { FaComments } from "react-icons/fa";
 import { UserIcon } from "../UserIcon/UserIcon";
 
-export default function Post() {
+interface Props {
+  username: string;
+  account: string;
+  date: string;
+  content: string;
+  likes: string;
+  comments: string;
+  image?: string;
+}
+
+export default function Post({
+  username,
+  account,
+  date,
+  content,
+  likes,
+  comments,
+}: Props) {
   return (
     <section className="postContainer">
       <UserIcon />
       <div className="postContent">
         <div className="postContentTop">
           <div className="postContentTopNames">
-            <span className="postUserName">John Doe</span>
-            <span className="postUserSubName"> @John_Doe</span>
+            <span className="postUserName">{username}</span>
+            <span className="postUserSubName"> {account}</span>
           </div>
-          <span className="postUserSubName"> 4 de julio</span>
+          <span className="postUserSubName"> {date}</span>
         </div>
-        <span className="postContentDescription">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed atque
-          temporibus enim ipsum delectus, perspiciatis facere assumenda
-          laboriosam fugiat pariatur doloremque, laudantium odio ut repudiandae
-          ex eum reprehenderit autem. Tempore!
-        </span>
+        <span className="postContentDescription">{content}</span>
         <div className="postContentImageContainer"></div>
         <div className="postContentBottom">
           <div>
             <FaThumbsUp fill="grey" />
-            <span className="postContentBottomText">3 Likes</span>
+            <span className="postContentBottomText">{likes} Likes</span>
           </div>
           <div>
             <FaComments fill="grey" />
-            <span className="postContentBottomText">8 comentarios</span>
+            <span className="postContentBottomText">
+              {comments} comentarios
+            </span>
           </div>
         </div>
       </div>

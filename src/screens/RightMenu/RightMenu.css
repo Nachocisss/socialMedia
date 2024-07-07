@@ -1,6 +1,10 @@
 .rightMenuContainer {
-  flex: 3;
   padding: 32px;
+  position: fixed;
+  right: 0;
+  z-index: 2;
+  height: 95vh;
+  width: 20vw;
 }
 input {
   background-color: rgb(78, 109, 140);
@@ -21,7 +25,11 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s linear;
+}
+.rightMenuOthersContacts:hover {
+  background-color: rgba(255, 255, 255);
 }
 .rightMenuOthersContactsText {
   margin: 16px;
@@ -56,5 +64,6 @@ input::placeholder {
 .contactCardButton {
   background-color: #aa01d0;
   border-radius: 9999px;
-  height: 40px;
+  height: 30px;
+  font-size: 10px;
 }

@@ -5,7 +5,7 @@ import "./UserIcon.css";
 export function UserIcon() {
   return (
     <div className="userTokenContainer">
-      <FaUserCircle size={40} fill="black" />
+      <FaUserCircle size={40} fill="grey" />
     </div>
   );
 }
