@@ -33,11 +33,15 @@
   font-weight: 500;
 }
 .postContentImageContainer {
-  height: 300px;
-  width: auto;
+  display: flex;
+  width: 500px;
   border-radius: 16px;
   margin-top: 16px;
-  background-color: rgb(189, 189, 189);
+  justify-content: center;
+}
+.postImage {
+  max-width: 100%;
+  max-height: 400px;
 }
 .postContentBottom {
   margin-top: 8px;
