@@ -5,16 +5,35 @@
   z-index: 1;
   width: 20vw;
 }
+.leftMenuLogo {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.LeftMenuLogoText {
+  margin-left: 4px;
+  font-size: 32px;
+  color: black;
+  font-weight: 800;
+  background: linear-gradient(-45deg, #ae0bd3, #8a35b4, #1c1c1c);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
 .LeftMenuContentContainer {
   display: flex;
   flex-direction: column;
   height: 95vh;
   justify-content: space-between;
 }
-.LeftMenuOptionContainer {
-  padding: 12px;
+.LeftMenuOptionsContainer {
+  width: 70%;
+  align-self: flex-end;
 }
-.LeftMenuOptionContainer:hover {
+.LeftMenuItemContainer {
+  padding: 12px;
+  align-items: center;
+}
+.LeftMenuItemContainer:hover {
   background-color: rgba(255, 255, 255, 0.103);
   border-radius: 16px;
   cursor: pointer;
@@ -25,14 +44,14 @@
   background-color: #aa01d0;
   border-radius: 100%;
 }
-.menuItemContainer {
+.menuItem {
   display: flex;
   justify-content: start;
   align-items: center;
   opacity: 0.7;
   gap: 8px;
 }
-.menuItemContainerSelected {
+.menuItemSelected {
   opacity: 1;
 }
 .menuItemTitle {

@@ -8,17 +8,17 @@ export default function ProfileScreen() {
 
   const postsData = [
     {
-      username: "John Doe",
-      account: "@John_Doe",
+      username: "Username",
+      account: "@Username",
       date: "4 de julio",
-      content: postContentLorem,
+      content: "Lorem Lorem",
       likes: "4",
       comments: "2",
       image: "somePath",
     },
     {
-      username: "Jack Leli",
-      account: "@JLeli34X",
+      username: "Username",
+      account: "@Username",
       date: "1 de julio",
       content: postContentLorem,
       likes: "19",

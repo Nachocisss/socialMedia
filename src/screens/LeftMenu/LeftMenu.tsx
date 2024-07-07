@@ -6,21 +6,22 @@ import { FaHome } from "react-icons/fa";
 import { UserIcon } from "../../components/UserIcon/UserIcon";
 import { FaGear } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import { BsHeadphones } from "react-icons/bs";
 
 const options = [
   {
     title: "Home",
-    icon: <FaHome size={25} />,
+    icon: <FaHome size={24} />,
     screen: "./",
   },
   {
     title: "My Profile",
-    icon: <FaUserCircle size={25} />,
+    icon: <FaUserCircle size={24} />,
     screen: "./Profile",
   },
   {
-    title: "Option 3",
-    icon: <FaHashtag size={25} />,
+    title: "Chat",
+    icon: <FaHashtag size={24} />,
   },
 ];
 
@@ -32,31 +33,33 @@ export default function LeftMenu() {
     navigate(screen);
   }
 
+  function optionsRender() {
+    return options.map((option, index) => {
+      const selected = selectedIndex === index;
+      return (
+        <div
+          key={`${option.title}-LeftMenu-option`}
+          className="LeftMenuItemContainer"
+          onClick={() => onclickHandler(index, option.screen ?? "")}
+        >
+          <div className={`menuItem ${selected && "menuItemSelected"}`}>
+            {option.icon}
+            <span className={`menuItemTitle`}>{option.title}</span>
+          </div>
+          {}
+        </div>
+      );
+    });
+  }
+
   return (
     <aside className="LeftMenuContainer">
+      <div className="leftMenuLogo">
+        <BsHeadphones size={40} fill="black" />
+        <span className="LeftMenuLogoText">MyndGarage</span>
+      </div>
       <div className="LeftMenuContentContainer">
-        <div>
-          {options.map((option, index) => {
-            const selected = selectedIndex === index;
-            return (
-              <div
-                key={`${option.title}-LeftMenu-option`}
-                className="LeftMenuOptionContainer"
-                onClick={() => onclickHandler(index, option.screen ?? "")}
-              >
-                <div
-                  className={`menuItemContainer ${
-                    selected && "menuItemContainerSelected"
-                  }`}
-                >
-                  {option.icon}
-                  <span className={`menuItemTitle`}>{option.title}</span>
-                </div>
-                {}
-              </div>
-            );
-          })}
-        </div>
+        <div className="LeftMenuOptionsContainer">{optionsRender()}</div>
         <div className="leftMenuMyProfileContainer">
           <UserIcon />
           <div className="leftMenuMyProfiletextContainer">
