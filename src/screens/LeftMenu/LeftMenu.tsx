@@ -6,7 +6,7 @@ import { FaHome } from "react-icons/fa";
 import { UserIcon } from "../../components/UserIcon/UserIcon";
 import { FaGear } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
-import { BsHeadphones } from "react-icons/bs";
+import { MdOutlineComputer } from "react-icons/md";
 
 const options = [
   {
@@ -55,8 +55,8 @@ export default function LeftMenu() {
   return (
     <aside className="LeftMenuContainer">
       <div className="leftMenuLogo">
-        <BsHeadphones size={40} fill="black" />
-        <span className="LeftMenuLogoText">MyndGarage</span>
+        <MdOutlineComputer size={36} fill="black" />
+        <span className="LeftMenuLogoText">NachoCisss Dev</span>
       </div>
       <div className="LeftMenuContentContainer">
         <div className="LeftMenuOptionsContainer">{optionsRender()}</div>

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./RightMenu.css";
 import { UserIcon } from "../../components/UserIcon/UserIcon";
+import { IoIosChatbubbles } from "react-icons/io";
 
 const contactsData = [
   { title: "Name 1", subtitle: "@Account1" },
@@ -9,7 +10,7 @@ const contactsData = [
   { title: "Client 4", subtitle: "@MisterClient4x34" },
 ];
 
-const contactCard = (c) => {
+const contactCard = (c: { title: string; subtitle: string }) => {
   return (
     <div className="contactCardContainer">
       <UserIcon />
@@ -22,14 +23,30 @@ const contactCard = (c) => {
   );
 };
 export function RightMenu() {
+  const [openChat, setOpenChat] = useState(false);
   return (
     <aside className="rightMenuContainer">
-      <input type="text" placeholder="Search" />
-      <div className="rightMenuOthersContacts">
-        <span className="rightMenuOthersContactsText">Other Users</span>
-        {contactsData.map((c) => {
-          return contactCard(c);
-        })}
+      <div className="rightMenuTop">
+        <input type="text" placeholder="Search" />
+        <div className="rightMenuOthersContacts">
+          <span className="rightMenuOthersContactsText">Other Users</span>
+          {contactsData.map((c) => {
+            return contactCard(c);
+          })}
+        </div>
+      </div>
+      <div className="rightMenuBottom">
+        {openChat ? (
+          <div className="chatContainerOpen" onClick={() => setOpenChat(false)}>
+            <IoIosChatbubbles fill="black" size={20} />
+            <span className="chatTitle">Chats</span>
+          </div>
+        ) : (
+          <div className="chatContainerClose" onClick={() => setOpenChat(true)}>
+            <IoIosChatbubbles fill="black" size={20} />
+            <span className="chatTitle">Chats</span>
+          </div>
+        )}
       </div>
     </aside>
   );
