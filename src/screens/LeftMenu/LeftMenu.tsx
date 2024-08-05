@@ -54,12 +54,17 @@ export default function LeftMenu() {
 
   return (
     <aside className="LeftMenuContainer">
-      <div className="leftMenuLogo">
-        <MdOutlineComputer size={36} fill="black" />
-        <span className="LeftMenuLogoText">NachoCisss Dev</span>
+      <div className="leftMenuTop">
+        <div className="leftMenuLogo">
+          <MdOutlineComputer size={36} fill="black" />
+          <span className="LeftMenuLogoText">NachoCisss Dev</span>
+        </div>
       </div>
+
       <div className="LeftMenuContentContainer">
         <div className="LeftMenuOptionsContainer">{optionsRender()}</div>
+      </div>
+      <div className="leftMenuBottom">
         <div className="leftMenuMyProfileContainer">
           <UserIcon />
           <div className="leftMenuMyProfiletextContainer">
