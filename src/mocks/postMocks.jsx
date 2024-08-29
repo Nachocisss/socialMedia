@@ -1,4 +1,16 @@
-[
+import MyAppv1 from '../assets/MyAppv1.png'
+
+function postMocks(){
+return [
+  {
+    "username": "Ignacio Cisternas",
+    "account": "@Nachocisss",
+    "date": "28 de Agosto",
+    "content": "¡Primera version de My CV App! 🎆💻 #MyApp",
+    "likes": "4",
+    "comments": "2",
+    "image": MyAppv1
+  },
   {
     "username": "John Doe",
     "account": "@John_Doe",
@@ -230,3 +242,6 @@
     "image": "https://images.unsplash.com/photo-1454923634634-bd1614719a7b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]
+}
+
+export default postMocks

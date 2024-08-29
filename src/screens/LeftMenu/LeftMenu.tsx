@@ -3,24 +3,27 @@ import "./LeftMenu.css";
 import { FaHashtag } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
-import { UserIcon } from "../../components/UserIcon/UserIcon";
-import { FaGear } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
-import { MdOutlineComputer } from "react-icons/md";
+import MenuCard from "../../components/LeftMenu/MenuCard/MenuCard";
+import { AiTwotoneFire } from "react-icons/ai";
 
 const options = [
   {
-    title: "Home",
-    icon: <FaHome size={24} />,
-    screen: "./",
-  },
-  {
-    title: "My Profile",
+    title: "About Me",
     icon: <FaUserCircle size={24} />,
     screen: "./Profile",
   },
   {
+    title: "Portafolio",
+    icon: <FaHome size={24} />,
+    screen: "./",
+  },
+  {
     title: "Chat",
+    icon: <FaHashtag size={24} />,
+  },
+  {
+    title: "Try It!",
     icon: <FaHashtag size={24} />,
   },
 ];
@@ -46,7 +49,6 @@ export default function LeftMenu() {
             {option.icon}
             <span className={`menuItemTitle`}>{option.title}</span>
           </div>
-          {}
         </div>
       );
     });
@@ -56,25 +58,14 @@ export default function LeftMenu() {
     <aside className="LeftMenuContainer">
       <div className="leftMenuTop">
         <div className="leftMenuLogo">
-          <MdOutlineComputer size={36} fill="black" />
           <span className="LeftMenuLogoText">NachoCisss Dev</span>
         </div>
       </div>
-
       <div className="LeftMenuContentContainer">
         <div className="LeftMenuOptionsContainer">{optionsRender()}</div>
       </div>
       <div className="leftMenuBottom">
-        <div className="leftMenuMyProfileContainer">
-          <UserIcon />
-          <div className="leftMenuMyProfiletextContainer">
-            <span className="leftMenuMyProfileTitle">Username</span>
-            <span className="leftMenuMyProfileSubtitle">@Username43</span>
-          </div>
-          <div className="leftMenuMyProfileGearContainer">
-            <FaGear fill="black" size={25} />
-          </div>
-        </div>
+        <MenuCard />
       </div>
     </aside>
   );

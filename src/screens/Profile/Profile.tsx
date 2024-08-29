@@ -24,6 +24,14 @@ export default function ProfileScreen() {
       likes: "19",
       comments: "20",
     },
+    {
+      username: "Username",
+      account: "@Username",
+      date: "1 de julio",
+      content: postContentLorem,
+      likes: "19",
+      comments: "20",
+    },
   ];
   return (
     <div className="profileContainer">

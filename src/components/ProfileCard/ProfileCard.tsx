@@ -2,7 +2,7 @@ import React from "react";
 import "./ProfileCard.css";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaLink } from "react-icons/fa";
-import { FaUserCircle } from "react-icons/fa";
+import myImage from "../../assets/yo.jpeg";
 
 const FOLLOWERS_NUMBER = 653;
 const FOLLOWING_NUMBER = 341;
@@ -14,22 +14,25 @@ export function ProfileCard() {
       <div className="profileCardContainer">
         <div className="profileTop">
           <div className="profilePhoto">
-            <FaUserCircle fill="black" size={150} />
+            <img className="profileImage" src={myImage} alt={`Image of my`} />
           </div>
-          <h2>Username</h2>
-          <span className="profileSubtitle"> @Usename</span>
-
+          <h2>Ignacio Cisternas</h2>
+          <span className="profileSubtitle"> @Nachocisss</span>
           <div className="profileIconsContainer">
             <FaLocationDot fill="black" size={12} />
             <span className="profileIconText">Santiago, Chile</span>
             <FaLink fill="black" size={12} />
-            <span className="profileIconText">www.mysite.com</span>
+            <span className="profileIconText">
+              https://ignacio-cisternas.web.app/
+            </span>
           </div>
           <span className="profileDescription">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-            quod repudiandae vero quos eum quas tempore deleniti veritatis unde,
-            aperiam odit explicabo. At culpa quaerat officiis a, fuga veniam
-            dolore?
+            Software developer with 3 years of expertise in crafting solutions
+            that meet client requirements. Committed to continuous improvement
+            and delivering high-value work. Recognized for effective
+            communication, dedication to quality, and strong teamwork skills,
+            all contributing to successful project outcomes. Eager to embrace
+            new challenges for ongoing personal and professional growth.
           </span>
           <div className="followersContainer">
             <span className="followersNumber">{FOLLOWERS_NUMBER}</span>

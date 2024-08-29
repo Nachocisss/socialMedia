@@ -18,7 +18,7 @@
   font-size: 24px;
   color: black;
   font-weight: 800;
-  background: linear-gradient(-45deg, #ae0bd3, #8a35b4, #1c1c1c);
+  background: linear-gradient(-45deg, #ae0bd3, gold);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -61,49 +61,4 @@
   font-size: 24px;
   font-weight: 800;
   padding-bottom: 6px;
-}
-.leftMenuMyProfileContainer {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50px;
-  align-items: center;
-  padding: 8px;
-  display: flex;
-  transition: background-color 0.3s linear;
-}
-.leftMenuMyProfileContainer:hover {
-  background-color: rgba(255, 255, 255);
-  outline: 2px solid #aa01d0;
-}
-.leftMenuMyProfileButton {
-  width: 80%;
-}
-.leftMenuMyProfiletextContainer {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  justify-content: center;
-}
-.leftMenuMyProfileTitle {
-  font-size: 14px;
-  color: black;
-  font-weight: 700;
-}
-.leftMenuMyProfileSubtitle {
-  color: grey;
-  font-size: 12px;
-}
-.leftMenuMyProfileGearContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  width: 30px;
-  border-radius: 9999px;
-  padding: 4px;
-  border: 1px solid blue;
-}
-.leftMenuMyProfileGearContainer:hover {
-  border: 1px solid white;
-  background-color: #309ed5;
-  cursor: pointer;
 }
