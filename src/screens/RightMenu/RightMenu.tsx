@@ -39,12 +39,12 @@ export function RightMenu() {
         {openChat ? (
           <div className="chatContainerOpen" onClick={() => setOpenChat(false)}>
             <IoIosChatbubbles fill="black" size={20} />
-            <span className="chatTitle">Chats</span>
+            <span className="chatTitle">Latest</span>
           </div>
         ) : (
           <div className="chatContainerClose" onClick={() => setOpenChat(true)}>
             <IoIosChatbubbles fill="black" size={20} />
-            <span className="chatTitle">Chats</span>
+            <span className="chatTitle">Latest</span>
           </div>
         )}
       </div>

@@ -47,7 +47,7 @@ export default function Post({
         <div className="postContentBottom">
           <div>
             <FaThumbsUp fill="grey" />
-            <span className="postContentBottomText">{likes} Likes</span>
+            <span className="postContentBottomText">{likes} Images</span>
           </div>
           <div>
             <FaComments fill="grey" />

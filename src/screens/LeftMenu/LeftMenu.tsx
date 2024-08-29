@@ -5,18 +5,18 @@ import { FaUserCircle } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import MenuCard from "../../components/LeftMenu/MenuCard/MenuCard";
-import { AiTwotoneFire } from "react-icons/ai";
+import { FaRegCirclePlay } from "react-icons/fa6";
 
 const options = [
   {
     title: "About Me",
     icon: <FaUserCircle size={24} />,
-    screen: "./Profile",
+    screen: "./",
   },
   {
     title: "Portafolio",
     icon: <FaHome size={24} />,
-    screen: "./",
+    screen: "./Portafolio",
   },
   {
     title: "Chat",
@@ -24,7 +24,7 @@ const options = [
   },
   {
     title: "Try It!",
-    icon: <FaHashtag size={24} />,
+    icon: <FaRegCirclePlay size={24} />,
   },
 ];
 

@@ -11,6 +11,7 @@
   flex: 10;
   justify-content: start;
   text-align: start;
+  margin-right: 30px;
 }
 .postContentTopNames {
   display: flex;
@@ -34,7 +35,6 @@
 }
 .postContentImageContainer {
   display: flex;
-  width: 500px;
   border-radius: 16px;
   margin-top: 16px;
   justify-content: center;

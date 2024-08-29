@@ -2,6 +2,7 @@ import React from "react";
 import "./Profile.css";
 import { ProfileCard } from "../../components/ProfileCard/ProfileCard";
 import Post from "../../components/Post/Post";
+
 export default function ProfileScreen() {
   const postContentLorem =
     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor minima reiciendis, repellendus modi sequi sit ullam impedit laborum quod, ab corrupti itaque sapiente cupiditate necessitatibus nulla eos! Illo, blanditiis minus!";
