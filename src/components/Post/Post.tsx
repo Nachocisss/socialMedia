@@ -3,6 +3,17 @@ import "./Post.css";
 import { FaThumbsUp } from "react-icons/fa";
 import { FaComments } from "react-icons/fa";
 import { UserIcon } from "../UserIcon/UserIcon";
+import {
+  PostContainer,
+  PostContent,
+  PostContentBottomText,
+  PostContentDescription,
+  PostContentImageContainer,
+  PostContentTopNames,
+  PostImage,
+  PostUserName,
+  PostUserSubName,
+} from "./Post.styles";
 
 interface Props {
   username: string;
@@ -24,39 +35,38 @@ export default function Post({
   image,
 }: Props) {
   return (
-    <section className="postContainer">
+    <PostContainer>
       <UserIcon />
-      <div className="postContent">
-        <div className="postContentTop">
-          <div className="postContentTopNames">
-            <span className="postUserName">{username}</span>
-            <span className="postUserSubName"> {account}</span>
-          </div>
-          <span className="postUserSubName"> {date}</span>
+      <PostContent>
+        <div>
+          <PostContentTopNames>
+            <PostUserName>{username}</PostUserName>
+            <PostUserSubName> {account}</PostUserSubName>
+          </PostContentTopNames>
+          <PostUserSubName> {date}</PostUserSubName>
         </div>
-        <span className="postContentDescription">{content}</span>
+        <PostContentDescription>{content}</PostContentDescription>
         {image ? (
-          <div className="postContentImageContainer">
-            <img
-              className="postImage"
+          <PostContentImageContainer>
+            <PostImage
               src={image}
               alt={`Image of post made by ${username} on ${date}`}
             />
-          </div>
+          </PostContentImageContainer>
         ) : null}
         <div className="postContentBottom">
           <div>
             <FaThumbsUp fill="grey" />
-            <span className="postContentBottomText">{likes} Images</span>
+            <PostContentBottomText>{likes} Images</PostContentBottomText>
           </div>
           <div>
             <FaComments fill="grey" />
-            <span className="postContentBottomText">
+            <PostContentBottomText>
               {comments} comentarios
-            </span>
+            </PostContentBottomText>
           </div>
         </div>
-      </div>
-    </section>
+      </PostContent>
+    </PostContainer>
   );
 }

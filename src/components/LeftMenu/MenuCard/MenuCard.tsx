@@ -1,19 +1,26 @@
 import React from "react";
 import { UserIcon } from "../../../components/UserIcon/UserIcon";
 import { FaGear } from "react-icons/fa6";
-import "./MenuCard.css";
+import {
+  LeftMenuMyProfileContainer,
+  LeftMenuMyProfiletextContainer,
+  LeftMenuMyProfileTitle,
+  LeftMenuMyProfileSubtitle,
+  LeftMenuMyProfileGearContainer,
+} from "./MenuCard.styles";
+
 function MenuCard() {
   return (
-    <div className="leftMenuMyProfileContainer">
+    <LeftMenuMyProfileContainer>
       <UserIcon />
-      <div className="leftMenuMyProfiletextContainer">
-        <span className="leftMenuMyProfileTitle">Username</span>
-        <span className="leftMenuMyProfileSubtitle">@Username43</span>
-      </div>
-      <div className="leftMenuMyProfileGearContainer">
+      <LeftMenuMyProfiletextContainer>
+        <LeftMenuMyProfileTitle>Username</LeftMenuMyProfileTitle>
+        <LeftMenuMyProfileSubtitle>@Username43</LeftMenuMyProfileSubtitle>
+      </LeftMenuMyProfiletextContainer>
+      <LeftMenuMyProfileGearContainer>
         <FaGear fill="black" size={25} />
-      </div>
-    </div>
+      </LeftMenuMyProfileGearContainer>
+    </LeftMenuMyProfileContainer>
   );
 }
 
