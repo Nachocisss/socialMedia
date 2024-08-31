@@ -1,4 +1,5 @@
-.LeftMenuContainer {
+import styled from "styled-components";
+export const LeftMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -7,13 +8,13 @@
   z-index: 1;
   width: 20vw;
   height: 100vh;
-}
-.leftMenuLogo {
+`;
+export const LeftMenuLogo = styled.div`
   display: flex;
   align-items: center;
   margin: 20px;
-}
-.LeftMenuLogoText {
+`;
+export const LeftMenuLogoText = styled.span`
   margin-left: 4px;
   font-size: 24px;
   color: black;
@@ -21,44 +22,45 @@
   background: linear-gradient(-45deg, #ae0bd3, gold);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-}
-.LeftMenuContentContainer {
+`;
+export const LeftMenuContentContainer = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-}
-.LeftMenuOptionsContainer {
+`;
+export const LeftMenuOptionsContainer = styled.div`
   width: 70%;
   align-self: flex-end;
-}
-.LeftMenuItemContainer {
+`;
+export const LeftMenuItemContainer = styled.div`
   padding: 12px;
   align-items: center;
-}
-.LeftMenuItemContainer:hover {
-  background-color: rgba(255, 255, 255, 0.103);
-  border-radius: 16px;
-  cursor: pointer;
-}
-.circle {
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.103);
+    border-radius: 16px;
+    cursor: pointer;
+  }
+`;
+
+export const Circle = styled.div`
   height: 45px;
   width: 45px;
   background-color: #aa01d0;
   border-radius: 100%;
-}
-.menuItem {
+`;
+export const MenuItem = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
   opacity: 0.7;
   gap: 8px;
-}
-.menuItemSelected {
+`;
+export const MenuItemSelected = styled.div`
   opacity: 1;
-}
-.menuItemTitle {
+`;
+export const MenuItemTitle = styled.span`
   font-size: 24px;
   font-weight: 800;
   padding-bottom: 6px;
-}
+`;

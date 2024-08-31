@@ -1,11 +1,11 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
-import "./UserIcon.css";
+import { UserTokenContainer } from "./UserIcon.styles";
 
 export function UserIcon() {
   return (
-    <div className="userTokenContainer">
+    <UserTokenContainer>
       <FaUserCircle size={40} fill="grey" />
-    </div>
+    </UserTokenContainer>
   );
 }

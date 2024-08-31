@@ -1,4 +1,6 @@
-.rightMenuContainer {
+import styled from "styled-components";
+
+export const RightMenuContainer = styled.aside`
   position: fixed;
   display: flex;
   right: 0;
@@ -6,77 +8,66 @@
   height: 100vh;
   width: 20vw;
   padding: 0px 32px;
-}
-.rightMenuTop {
+`;
+export const RightMenuTop = styled.div`
   width: 100%;
-}
-input {
-  background-color: rgb(78, 109, 140);
-  border-radius: 24px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  width: 100%;
-  font-size: 16px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-input::placeholder {
-  color: white;
-}
-.rightMenuOthersContacts {
+`;
+
+export const RightMenuOthersContacts = styled.div`
   display: flex;
   width: 100%;
   border-radius: 12px;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.8);
   transition: background-color 0.3s linear;
-}
-.rightMenuOthersContacts:hover {
-  background-color: rgba(255, 255, 255);
-  outline: 2px solid #aa01d0;
-}
-.rightMenuOthersContactsText {
+
+  &:hover {
+    background-color: rgba(255, 255, 255);
+    outline: 2px solid #aa01d0;
+  }
+`;
+export const RightMenuOthersContactsText = styled.span`
   margin: 16px;
   font-size: 16px;
   font-weight: 600;
   color: black;
-}
-.contactCardContainer {
+`;
+export const ContactCardContainer = styled.div`
   display: flex;
   flex-direction: row;
   border-top: 1px solid gray;
   justify-content: start;
   align-items: center;
   padding: 8px;
-}
-.contactCardContainerText {
+`;
+export const ContactCardContainerText = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-}
-.contactCardTitle {
+`;
+export const ContactCardTitle = styled.span`
   color: black;
   font-size: 16px;
   font-weight: 600;
-}
-.contactCardSubtitle {
+`;
+export const ContactCardSubtitle = styled.span`
   padding-top: 2px;
   color: gray;
   font-size: 14px;
   font-weight: 600;
-}
-.contactCardButton {
+`;
+export const ContactCardButton = styled.button`
   background-color: #aa01d0;
   border-radius: 9999px;
   height: 30px;
   font-size: 10px;
-}
-.rightMenuBottom {
+`;
+export const RightMenuBottom = styled.div`
   position: absolute;
   bottom: 0px;
   width: 100%;
-}
-.chatContainerClose {
+`;
+export const ChatContainerClose = styled.div`
   background-color: rgba(240, 248, 255, 0.8);
   width: 20vw;
   height: 60px;
@@ -85,12 +76,12 @@ input::placeholder {
   text-align: center;
   align-content: center;
   cursor: pointer;
-}
-.chatContainerClose:hover {
-  background-color: rgba(240, 248, 255);
-  outline: #aa01d0 solid 3px;
-}
-.chatContainerOpen {
+  &:hover {
+    background-color: rgba(240, 248, 255);
+    outline: #aa01d0 solid 3px;
+  }
+`;
+export const ChatContainerOpen = styled.div`
   background-color: rgba(240, 248, 255);
   width: 20vw;
   height: 40vh;
@@ -101,18 +92,19 @@ input::placeholder {
   cursor: pointer;
   animation: grew 0.5s ease-out;
   outline: #aa01d0 solid 3px;
-}
-@keyframes grew {
-  from {
-    height: 60px;
+
+  @keyframes grew {
+    from {
+      height: 60px;
+    }
+    to {
+      height: 40vh;
+    }
   }
-  to {
-    height: 40vh;
-  }
-}
-.chatTitle {
+`;
+export const ChatTitle = styled.span`
   color: black;
   font-size: 24px;
   font-weight: 700;
   margin-left: 4px;
-}
+`;

@@ -1,7 +1,21 @@
 import React, { useState } from "react";
-import "./RightMenu.css";
 import { UserIcon } from "../../components/UserIcon/UserIcon";
 import { IoIosChatbubbles } from "react-icons/io";
+import {
+  ChatContainerClose,
+  ChatContainerOpen,
+  ChatTitle,
+  ContactCardButton,
+  ContactCardContainer,
+  ContactCardContainerText,
+  ContactCardSubtitle,
+  ContactCardTitle,
+  RightMenuBottom,
+  RightMenuContainer,
+  RightMenuOthersContacts,
+  RightMenuOthersContactsText,
+  RightMenuTop,
+} from "./RightMenu.styled";
 
 const contactsData = [
   { title: "Name 1", subtitle: "@Account1" },
@@ -12,42 +26,41 @@ const contactsData = [
 
 const contactCard = (c: { title: string; subtitle: string }) => {
   return (
-    <div className="contactCardContainer">
+    <ContactCardContainer>
       <UserIcon />
-      <div className="contactCardContainerText">
-        <span className="contactCardTitle"> {c.title}</span>
-        <span className="contactCardSubtitle"> {c.subtitle}</span>
-      </div>
-      <button className="contactCardButton">Seguir</button>
-    </div>
+      <ContactCardContainerText>
+        <ContactCardTitle> {c.title}</ContactCardTitle>
+        <ContactCardSubtitle> {c.subtitle}</ContactCardSubtitle>
+      </ContactCardContainerText>
+      <ContactCardButton>Seguir</ContactCardButton>
+    </ContactCardContainer>
   );
 };
 export function RightMenu() {
   const [openChat, setOpenChat] = useState(false);
   return (
-    <aside className="rightMenuContainer">
-      <div className="rightMenuTop">
-        <input type="text" placeholder="Search" />
-        <div className="rightMenuOthersContacts">
-          <span className="rightMenuOthersContactsText">Other Users</span>
+    <RightMenuContainer>
+      <RightMenuTop>
+        <RightMenuOthersContacts>
+          <RightMenuOthersContactsText>Other Users</RightMenuOthersContactsText>
           {contactsData.map((c) => {
             return contactCard(c);
           })}
-        </div>
-      </div>
-      <div className="rightMenuBottom">
+        </RightMenuOthersContacts>
+      </RightMenuTop>
+      <RightMenuBottom>
         {openChat ? (
-          <div className="chatContainerOpen" onClick={() => setOpenChat(false)}>
+          <ChatContainerOpen onClick={() => setOpenChat(false)}>
             <IoIosChatbubbles fill="black" size={20} />
-            <span className="chatTitle">Latest</span>
-          </div>
+            <ChatTitle>Latest</ChatTitle>
+          </ChatContainerOpen>
         ) : (
-          <div className="chatContainerClose" onClick={() => setOpenChat(true)}>
+          <ChatContainerClose onClick={() => setOpenChat(true)}>
             <IoIosChatbubbles fill="black" size={20} />
-            <span className="chatTitle">Latest</span>
-          </div>
+            <ChatTitle>Latest</ChatTitle>
+          </ChatContainerClose>
         )}
-      </div>
-    </aside>
+      </RightMenuBottom>
+    </RightMenuContainer>
   );
 }

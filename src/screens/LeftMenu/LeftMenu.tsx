@@ -1,11 +1,20 @@
 import React, { useState } from "react";
-import "./LeftMenu.css";
 import { FaHashtag } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import MenuCard from "../../components/LeftMenu/MenuCard/MenuCard";
 import { FaRegCirclePlay } from "react-icons/fa6";
+import {
+  LeftMenuContainer,
+  LeftMenuContentContainer,
+  LeftMenuItemContainer,
+  LeftMenuLogo,
+  LeftMenuLogoText,
+  LeftMenuOptionsContainer,
+  MenuItem,
+  MenuItemTitle,
+} from "./LeftMenu.styled";
 
 const options = [
   {
@@ -40,33 +49,32 @@ export default function LeftMenu() {
     return options.map((option, index) => {
       const selected = selectedIndex === index;
       return (
-        <div
+        <LeftMenuItemContainer
           key={`${option.title}-LeftMenu-option`}
-          className="LeftMenuItemContainer"
           onClick={() => onclickHandler(index, option.screen ?? "")}
         >
-          <div className={`menuItem ${selected && "menuItemSelected"}`}>
+          <MenuItem>
             {option.icon}
-            <span className={`menuItemTitle`}>{option.title}</span>
-          </div>
-        </div>
+            <MenuItemTitle>{option.title}</MenuItemTitle>
+          </MenuItem>
+        </LeftMenuItemContainer>
       );
     });
   }
 
   return (
-    <aside className="LeftMenuContainer">
-      <div className="leftMenuTop">
-        <div className="leftMenuLogo">
-          <span className="LeftMenuLogoText">NachoCisss Dev</span>
-        </div>
+    <LeftMenuContainer>
+      <div>
+        <LeftMenuLogo>
+          <LeftMenuLogoText>NachoCisss Dev</LeftMenuLogoText>
+        </LeftMenuLogo>
       </div>
-      <div className="LeftMenuContentContainer">
-        <div className="LeftMenuOptionsContainer">{optionsRender()}</div>
-      </div>
-      <div className="leftMenuBottom">
+      <LeftMenuContentContainer>
+        <LeftMenuOptionsContainer>{optionsRender()}</LeftMenuOptionsContainer>
+      </LeftMenuContentContainer>
+      <div>
         <MenuCard />
       </div>
-    </aside>
+    </LeftMenuContainer>
   );
 }
