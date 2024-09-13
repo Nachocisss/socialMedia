@@ -35,15 +35,18 @@ export const PostContentDescription = styled.span`
   font-size: 14px;
   font-weight: 500;
 `;
+export const LinkContainer = styled.div`
+  margin: 8px 0px;
+`;
+export const LinkText = styled.span`
+  fontsize: 20px;
+  margin-left: 4px;
+`;
 export const PostContentImageContainer = styled.div`
   display: flex;
   border-radius: 16px;
   margin-top: 16px;
   justify-content: center;
-`;
-export const PostImage = styled.img`
-  max-width: 100%;
-  max-height: 400px;
 `;
 export const PostContentBottom = styled.div`
   margin-top: 8px;

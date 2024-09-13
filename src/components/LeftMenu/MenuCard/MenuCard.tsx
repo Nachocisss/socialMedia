@@ -14,8 +14,8 @@ function MenuCard() {
     <LeftMenuMyProfileContainer>
       <UserIcon />
       <LeftMenuMyProfiletextContainer>
-        <LeftMenuMyProfileTitle>Username</LeftMenuMyProfileTitle>
-        <LeftMenuMyProfileSubtitle>@Username43</LeftMenuMyProfileSubtitle>
+        <LeftMenuMyProfileTitle>Ignacio Cisternas N.</LeftMenuMyProfileTitle>
+        <LeftMenuMyProfileSubtitle>@NachoCisss</LeftMenuMyProfileSubtitle>
       </LeftMenuMyProfiletextContainer>
       <LeftMenuMyProfileGearContainer>
         <FaGear fill="black" size={25} />

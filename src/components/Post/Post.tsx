@@ -1,16 +1,21 @@
 import React from "react";
-import "./Post.css";
 import { FaThumbsUp } from "react-icons/fa";
 import { FaComments } from "react-icons/fa";
 import { UserIcon } from "../UserIcon/UserIcon";
+import Carousel from "../Carrousel/Carrousel";
+import { Link } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
+
 import {
+  LinkContainer,
+  LinkText,
   PostContainer,
   PostContent,
+  PostContentBottom,
   PostContentBottomText,
   PostContentDescription,
   PostContentImageContainer,
   PostContentTopNames,
-  PostImage,
   PostUserName,
   PostUserSubName,
 } from "./Post.styles";
@@ -21,8 +26,9 @@ interface Props {
   date: string;
   content: string;
   likes: string;
+  link?: string;
   comments: string;
-  image?: string;
+  image?: [string];
 }
 
 export default function Post({
@@ -31,6 +37,7 @@ export default function Post({
   date,
   content,
   likes,
+  link,
   comments,
   image,
 }: Props) {
@@ -46,18 +53,23 @@ export default function Post({
           <PostUserSubName> {date}</PostUserSubName>
         </div>
         <PostContentDescription>{content}</PostContentDescription>
+        {link ? (
+          <LinkContainer>
+            <Link to={link}>
+              <FaGithub size={20} fill="black" />
+              <LinkText>Mira Aquí!</LinkText>
+            </Link>
+          </LinkContainer>
+        ) : null}
         {image ? (
           <PostContentImageContainer>
-            <PostImage
-              src={image}
-              alt={`Image of post made by ${username} on ${date}`}
-            />
+            <Carousel images={image} />
           </PostContentImageContainer>
         ) : null}
-        <div className="postContentBottom">
+        <PostContentBottom>
           <div>
             <FaThumbsUp fill="grey" />
-            <PostContentBottomText>{likes} Images</PostContentBottomText>
+            <PostContentBottomText>{likes} Likes</PostContentBottomText>
           </div>
           <div>
             <FaComments fill="grey" />
@@ -65,7 +77,7 @@ export default function Post({
               {comments} comentarios
             </PostContentBottomText>
           </div>
-        </div>
+        </PostContentBottom>
       </PostContent>
     </PostContainer>
   );

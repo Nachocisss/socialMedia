@@ -49,11 +49,11 @@ export const Circle = styled.div`
   background-color: #aa01d0;
   border-radius: 100%;
 `;
-export const MenuItem = styled.div`
+export const MenuItem = styled.div<{ selected: boolean }>`
   display: flex;
   justify-content: start;
   align-items: center;
-  opacity: 0.7;
+  opacity: ${({ selected }) => (selected ? 1 : 0.7)};
   gap: 8px;
 `;
 export const MenuItemSelected = styled.div`

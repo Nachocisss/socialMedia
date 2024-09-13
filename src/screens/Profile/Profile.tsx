@@ -2,6 +2,7 @@ import React from "react";
 import { ProfileCard } from "../../components/ProfileCard/ProfileCard";
 import Post from "../../components/Post/Post";
 import { ProfileContainer } from "./Profile.styled";
+import MyModule from "designsystemnacho";
 
 export default function ProfileScreen() {
   const postContentLorem =
@@ -15,7 +16,6 @@ export default function ProfileScreen() {
       content: "Lorem Lorem",
       likes: "4",
       comments: "2",
-      image: "somePath",
     },
     {
       username: "Username",
@@ -37,6 +37,7 @@ export default function ProfileScreen() {
   return (
     <ProfileContainer>
       <ProfileCard />
+      <MyModule />
       {postsData.map((p, index) => {
         return <Post key={`post${index}`} {...p} />;
       })}

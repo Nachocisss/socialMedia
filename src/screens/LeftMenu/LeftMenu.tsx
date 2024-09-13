@@ -53,7 +53,7 @@ export default function LeftMenu() {
           key={`${option.title}-LeftMenu-option`}
           onClick={() => onclickHandler(index, option.screen ?? "")}
         >
-          <MenuItem>
+          <MenuItem selected={selected}>
             {option.icon}
             <MenuItemTitle>{option.title}</MenuItemTitle>
           </MenuItem>
