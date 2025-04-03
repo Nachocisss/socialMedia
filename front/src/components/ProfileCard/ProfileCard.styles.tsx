@@ -19,57 +19,61 @@ export const ProfileBackground = styled.div`
 `;
 export const ProfilePhoto = styled.div`
   position: absolute;
-  top: -75px;
-  height: 140px;
-  width: 140px;
+  top: -140px;
+  height: 200px;
+  width: 200px;
   border-radius: 9999px;
   background-color: white;
   border: 4px solid #aa01d0;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
 `;
 export const ProfileImage = styled.img`
   border-radius: 9999px;
-  height: 140px;
-  width: 140px;
+  height: 200px;
+  width: 200px;
 `;
 export const ProfileTop = styled.div`
-  display: block;
-  justify-content: start;
   text-align: start;
-  & > h2 {
-    justify-content: start;
-    text-align: start;
-    margin: 0px;
-    color: black;
-    font-size: 30px;
-    margin-top: 68px;
-  }
 `;
 
+export const ProfileTitleContainer = styled.div`
+  color: black;
+  font-size: 30px;
+  margin-top: 68px;
+  justify-content: flex-end;
+`;
+
+export const ProfileIconsContainer = styled.div`
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-bottom: 16px;
+`;
+
+export const ProfileTitle = styled.h2`
+  display: flex;
+  margin-bottom: 12px;
+`;
 export const ProfileSubtitle = styled.span`
   display: flex;
   color: gray;
   font-weight: 600;
-`;
-export const ProfileIconsContainer = styled.div`
-  display: flex;
-  gap: 4px;
-  margin-top: 8px;
-  align-items: center;
+  font-size: 20px;
 `;
 export const ProfileIconText = styled.span`
   margin-right: 4px;
   color: gray;
-  font-size: 12px;
+  font-size: 20px;
 `;
-export const ProfileDescription = styled.span`
-  color: black;
-  font-size: 12px;
-  font-weight: 600;
+export const ProfileDescription = styled.p`
+  color: rgb(60, 60, 60);
+  font-size: 20px;
+  font-weight: 500;
 `;
 export const FollowersContainer = styled.div`
   display: flex;
   gap: 4px;
-  margin-top: 8px;
+  margin-top: 20px;
 `;
 export const FollowersNumber = styled.span`
   color: black;

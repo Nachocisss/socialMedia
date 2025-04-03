@@ -10,59 +10,7 @@ export const RightMenuContainer = styled.aside`
   width: 20vw;
   padding: 0px 32px;
 `;
-export const RightMenuTop = styled.div`
-  width: 100%;
-`;
 
-export const RightMenuOthersContacts = styled.div`
-  display: flex;
-  width: 100%;
-  border-radius: 12px;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.8);
-  transition: background-color 0.3s linear;
-
-  &:hover {
-    background-color: rgba(255, 255, 255);
-    outline: 2px solid #aa01d0;
-  }
-`;
-export const RightMenuOthersContactsText = styled.span`
-  margin: 16px;
-  font-size: 16px;
-  font-weight: 600;
-  color: black;
-`;
-export const ContactCardContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  border-top: 1px solid gray;
-  justify-content: start;
-  align-items: center;
-  padding: 8px;
-`;
-export const ContactCardContainerText = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-`;
-export const ContactCardTitle = styled.span`
-  color: black;
-  font-size: 16px;
-  font-weight: 600;
-`;
-export const ContactCardSubtitle = styled.span`
-  padding-top: 2px;
-  color: gray;
-  font-size: 14px;
-  font-weight: 600;
-`;
-export const ContactCardButton = styled.button`
-  background-color: #aa01d0;
-  border-radius: 9999px;
-  height: 30px;
-  font-size: 10px;
-`;
 export const RightMenuBottom = styled.div`
   position: absolute;
   bottom: 0px;

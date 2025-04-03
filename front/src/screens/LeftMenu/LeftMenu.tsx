@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import { FaHashtag } from "react-icons/fa";
+import { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
-import { FaHome } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import MenuCard from "../../components/LeftMenu/MenuCard/MenuCard";
-import { FaRegCirclePlay } from "react-icons/fa6";
 import {
   LeftMenuContainer,
   LeftMenuContentContainer,
@@ -21,19 +17,6 @@ const options = [
     title: "About Me",
     icon: <FaUserCircle size={24} />,
     screen: "./",
-  },
-  {
-    title: "Portafolio",
-    icon: <FaHome size={24} />,
-    screen: "./Portafolio",
-  },
-  {
-    title: "Chat",
-    icon: <FaHashtag size={24} />,
-  },
-  {
-    title: "Try It!",
-    icon: <FaRegCirclePlay size={24} />,
   },
 ];
 
@@ -64,17 +47,12 @@ export default function LeftMenu() {
 
   return (
     <LeftMenuContainer>
-      <div>
-        <LeftMenuLogo>
-          <LeftMenuLogoText>NachoCisss Dev</LeftMenuLogoText>
-        </LeftMenuLogo>
-      </div>
+      <LeftMenuLogo>
+        <LeftMenuLogoText>NachoCisss Dev</LeftMenuLogoText>
+      </LeftMenuLogo>
       <LeftMenuContentContainer>
         <LeftMenuOptionsContainer>{optionsRender()}</LeftMenuOptionsContainer>
       </LeftMenuContentContainer>
-      <div>
-        <MenuCard />
-      </div>
     </LeftMenuContainer>
   );
 }

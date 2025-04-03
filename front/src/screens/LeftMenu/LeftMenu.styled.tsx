@@ -12,13 +12,12 @@ export const LeftMenuContainer = styled.div`
 export const LeftMenuLogo = styled.div`
   display: flex;
   align-items: center;
-  margin: 20px;
+  justify-content: center;
 `;
-export const LeftMenuLogoText = styled.span`
-  margin-left: 4px;
-  font-size: 24px;
-  color: black;
-  font-weight: 800;
+export const LeftMenuLogoText = styled.h1`
+  margin: 20px;
+  font-size: 30px;
+
   background: linear-gradient(-45deg, #ae0bd3, gold);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -30,7 +29,7 @@ export const LeftMenuContentContainer = styled.div`
   justify-content: space-between;
 `;
 export const LeftMenuOptionsContainer = styled.div`
-  width: 70%;
+  width: 80%;
   align-self: flex-end;
 `;
 export const LeftMenuItemContainer = styled.div`
@@ -59,8 +58,7 @@ export const MenuItem = styled.div<{ selected: boolean }>`
 export const MenuItemSelected = styled.div`
   opacity: 1;
 `;
-export const MenuItemTitle = styled.span`
-  font-size: 24px;
-  font-weight: 800;
-  padding-bottom: 6px;
+export const MenuItemTitle = styled.h2`
+  font-size: 30px;
+  margin: 4px;
 `;

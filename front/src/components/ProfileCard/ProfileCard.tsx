@@ -14,6 +14,8 @@ import {
   ProfileImage,
   ProfilePhoto,
   ProfileSubtitle,
+  ProfileTitle,
+  ProfileTitleContainer,
   ProfileTop,
 } from "./ProfileCard.styles";
 
@@ -29,9 +31,11 @@ export function ProfileCard() {
           <ProfilePhoto>
             <ProfileImage src={myImage} alt={`Image of my`} />
           </ProfilePhoto>
-          <h2>Ignacio Cisternas</h2>
-          <ProfileSubtitle> @Nachocisss</ProfileSubtitle>
+          <ProfileTitleContainer>
+            <ProfileTitle>Ignacio Cisternas Núñez </ProfileTitle>
+          </ProfileTitleContainer>
           <ProfileIconsContainer>
+            <ProfileSubtitle> @Nachocisss</ProfileSubtitle>
             <FaLocationDot fill="black" size={12} />
             <ProfileIconText>Santiago, Chile</ProfileIconText>
             <FaLink fill="black" size={12} />
@@ -42,10 +46,13 @@ export function ProfileCard() {
           <ProfileDescription>
             Software developer with 3 years of expertise in crafting solutions
             that meet client requirements. Committed to continuous improvement
-            and delivering high-value work. Recognized for effective
-            communication, dedication to quality, and strong teamwork skills,
-            all contributing to successful project outcomes. Eager to embrace
-            new challenges for ongoing personal and professional growth.
+            and delivering high-value work.
+          </ProfileDescription>
+          <ProfileDescription>
+            Recognized for effective communication, dedication to quality, and
+            strong teamwork skills, all contributing to successful project
+            outcomes. Eager to embrace new challenges for ongoing personal and
+            professional growth.
           </ProfileDescription>
           <FollowersContainer>
             <FollowersNumber>{FOLLOWERS_NUMBER}</FollowersNumber>
