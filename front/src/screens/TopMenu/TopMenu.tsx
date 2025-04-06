@@ -2,15 +2,15 @@ import { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import {
-  LeftMenuContainer,
-  LeftMenuContentContainer,
-  LeftMenuItemContainer,
-  LeftMenuLogo,
-  LeftMenuLogoText,
-  LeftMenuOptionsContainer,
+  TopMenuContainer,
+  TopMenuContentContainer,
+  TopMenuItemContainer,
+  TopMenuLogo,
+  TopMenuLogoText,
+  TopMenuOptionsContainer,
   MenuItem,
   MenuItemTitle,
-} from "./LeftMenu.styled";
+} from "./TopMenu.styled";
 
 const options = [
   {
@@ -18,9 +18,14 @@ const options = [
     icon: <FaUserCircle size={24} />,
     screen: "./",
   },
+  {
+    title: "Portfolio",
+    icon: <FaUserCircle size={24} />,
+    screen: "./portafolio",
+  },
 ];
 
-export default function LeftMenu() {
+export default function TopMenu() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const navigate = useNavigate();
   function onclickHandler(index: number, screen: string) {
@@ -32,27 +37,27 @@ export default function LeftMenu() {
     return options.map((option, index) => {
       const selected = selectedIndex === index;
       return (
-        <LeftMenuItemContainer
-          key={`${option.title}-LeftMenu-option`}
+        <TopMenuItemContainer
+          key={`${option.title}-TopMenu-option`}
           onClick={() => onclickHandler(index, option.screen ?? "")}
         >
           <MenuItem selected={selected}>
             {option.icon}
             <MenuItemTitle>{option.title}</MenuItemTitle>
           </MenuItem>
-        </LeftMenuItemContainer>
+        </TopMenuItemContainer>
       );
     });
   }
 
   return (
-    <LeftMenuContainer>
-      <LeftMenuLogo>
-        <LeftMenuLogoText>NachoCisss Dev</LeftMenuLogoText>
-      </LeftMenuLogo>
-      <LeftMenuContentContainer>
-        <LeftMenuOptionsContainer>{optionsRender()}</LeftMenuOptionsContainer>
-      </LeftMenuContentContainer>
-    </LeftMenuContainer>
+    <TopMenuContainer>
+      <TopMenuLogo>
+        <TopMenuLogoText>NachoCisss Dev</TopMenuLogoText>
+      </TopMenuLogo>
+      <TopMenuContentContainer>
+        <TopMenuOptionsContainer>{optionsRender()}</TopMenuOptionsContainer>
+      </TopMenuContentContainer>
+    </TopMenuContainer>
   );
 }

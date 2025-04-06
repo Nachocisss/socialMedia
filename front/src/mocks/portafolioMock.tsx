@@ -1,6 +1,6 @@
 import MyAppv1 from "../assets/MyAppv1.png";
 import MyAppv2 from "../assets/MyAppv2.png";
-export const postMocks = [
+export const portafolioMock = [
   {
     username: "NachoCisss Dev",
     account: "@Nachocisss",

@@ -1,20 +1,18 @@
 import styled from "styled-components";
-export const LeftMenuContainer = styled.div`
+export const TopMenuContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  position: fixed;
-  left: 0;
   padding: 0px 16px;
-  z-index: 1;
-  width: 20vw;
-  height: 100vh;
+  flex: 1;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
 `;
-export const LeftMenuLogo = styled.div`
+export const TopMenuLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
-export const LeftMenuLogoText = styled.h1`
+export const TopMenuLogoText = styled.h1`
   margin: 20px;
   font-size: 30px;
 
@@ -22,17 +20,16 @@ export const LeftMenuLogoText = styled.h1`
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 `;
-export const LeftMenuContentContainer = styled.div`
+export const TopMenuContentContainer = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
 `;
-export const LeftMenuOptionsContainer = styled.div`
-  width: 80%;
-  align-self: flex-end;
+export const TopMenuOptionsContainer = styled.div`
+  display: flex;
 `;
-export const LeftMenuItemContainer = styled.div`
+export const TopMenuItemContainer = styled.div`
   padding: 12px;
   align-items: center;
   &:hover {

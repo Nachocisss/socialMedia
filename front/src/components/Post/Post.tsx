@@ -1,4 +1,3 @@
-import React from "react";
 import { FaThumbsUp } from "react-icons/fa";
 import { FaComments } from "react-icons/fa";
 import { UserIcon } from "../UserIcon/UserIcon";

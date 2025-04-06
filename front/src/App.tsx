@@ -1,19 +1,18 @@
 import "./App.css";
-import React from "react";
-import LeftMenu from "./screens/LeftMenu/LeftMenu";
-import { RightMenu } from "./screens/RightMenu/RightMenu";
+import TopMenu from "./screens/TopMenu/TopMenu";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ProfileScreen from "./screens/Profile/Profile";
+import PortafolioScreen from "./screens/PortafolioScreen/PortafolioScreen";
+import ResumeScreen from "./screens/ResumeScreen/ResumeScreen";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <LeftMenu />
+        <TopMenu />
         <Routes>
-          <Route path={"/"} index element={<ProfileScreen />} />
+          <Route path={"/"} index element={<ResumeScreen />} />
+          <Route path={"/portafolio"} index element={<PortafolioScreen />} />
         </Routes>
-        <RightMenu />
       </div>
     </BrowserRouter>
   );
