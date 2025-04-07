@@ -45,19 +45,20 @@ export const TopCardYearTextContainer = styled.div`
 `;
 
 export const TopCardYearTextNumber = styled.span`
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   margin-right: 8px;
-`;
-
-export const TopCardYearText = styled.span`
-  font-size: 18px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #ffdf9e, #cda34f);
+  filter: drop-shadow(8px 8px 5px #000000);
 `;
 
 export const TopButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 16px;
+  margin-top: 20px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -65,14 +66,55 @@ export const TopButtonContainer = styled.div`
 `;
 
 export const TopButtonCv = styled.div`
-  margin-right: 16px;
+  display: inline-block;
+  margin-right: 20px;
+`;
+
+export const CvDownload = styled.a`
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 export const TopButton = styled.a`
-  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
   img {
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: rgb(253, 233, 116);
   }
 `;
 
@@ -115,21 +157,5 @@ export const ProfileImage = styled.img`
     transform: scale(1.07) rotate(3deg);
     box-shadow: 0 0 25px #aa01d0;
     border-color: #ffdf9e;
-  }
-`;
-export const CvDownload = styled.a`
-  display: inline-block;
-  background-color: #333;
-  color: #e7e9ea;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: 1px solid #cda34f;
-  background: radial-gradient(circle, #363636 1%, #161616 100%);
-  transition: background 0.3s ease, transform 0.3s ease;
-
-  &:hover {
-    background: radial-gradient(circle, #4b4b4b 1%, #202020 100%);
-    transform: translateY(-2px);
   }
 `;

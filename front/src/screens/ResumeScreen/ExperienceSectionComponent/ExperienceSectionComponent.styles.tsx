@@ -66,12 +66,12 @@ export const Subtitles = styled.span`
 export const ExperienceStackContainer = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 20px 40px;
-  margin-top: auto;
-
+  padding: 30px 0px;
+  flex-grow: 1;
+  justify-content: flex-start;
   img {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     margin-left: 16px;
     filter: drop-shadow(5px 5px 10px #000000);

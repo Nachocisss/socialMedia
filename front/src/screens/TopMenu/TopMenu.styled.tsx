@@ -1,61 +1,79 @@
 import styled from "styled-components";
-export const TopMenuContainer = styled.div`
-  display: flex;
-  padding: 0px 16px;
-  flex: 1;
-  width: 100%;
+
+export const TopMenuContainer = styled.div<{ isScrolled: boolean }>`
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: ${(props) => (props.isScrolled ? "60px" : "100px")};
+  background-color: ${(props) =>
+    props.isScrolled ? "#121212" : "rgba(18, 18, 18, 0.8)"};
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: ${(props) =>
+    props.isScrolled ? "0 2px 5px rgba(0, 0, 0, 0.3)" : "none"};
+  transition: all 0.3s ease;
+  z-index: 1000;
 `;
+
 export const TopMenuLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
+
 export const TopMenuLogoText = styled.h1`
   margin: 20px;
-  font-size: 30px;
-
+  font-size: 24px;
   background: linear-gradient(-45deg, #ae0bd3, gold);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 `;
+
 export const TopMenuContentContainer = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
 `;
+
 export const TopMenuOptionsContainer = styled.div`
   display: flex;
+  gap: 20px;
 `;
+
 export const TopMenuItemContainer = styled.div`
-  padding: 12px;
+  display: flex;
   align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
   &:hover {
-    background-color: rgba(255, 255, 255, 0.103);
-    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
     cursor: pointer;
   }
 `;
 
-export const Circle = styled.div`
-  height: 45px;
-  width: 45px;
-  background-color: #aa01d0;
-  border-radius: 100%;
-`;
 export const MenuItem = styled.div<{ selected: boolean }>`
   display: flex;
-  justify-content: start;
   align-items: center;
-  opacity: ${({ selected }) => (selected ? 1 : 0.7)};
-  gap: 8px;
+  gap: 10px;
+  color: ${({ selected }) => (selected ? "#FFD700" : "white")};
+  font-weight: ${({ selected }) => (selected ? "bold" : "normal")};
+  transition: color 0.3s ease;
+
+  svg {
+    font-size: 20px;
+    color: ${({ selected }) => (selected ? "#FFD700" : "white")};
+    transition: color 0.3s ease;
+  }
 `;
-export const MenuItemSelected = styled.div`
-  opacity: 1;
-`;
-export const MenuItemTitle = styled.h2`
-  font-size: 30px;
-  margin: 4px;
+
+export const MenuItemTitle = styled.span`
+  font-size: 16px;
 `;

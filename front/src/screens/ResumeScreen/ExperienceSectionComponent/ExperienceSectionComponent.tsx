@@ -8,10 +8,19 @@ import {
 
 import { experiences } from "../ResumeContent";
 
+interface Experience {
+  title: string;
+  company: string;
+  description: string;
+  responsibilities: string[];
+  achievements: string[];
+  stack: string[];
+}
+
 const ExperienceSectionComponent = () => {
   return (
     <ExperienceSection>
-      {experiences.map((exp: any, index: number) => (
+      {experiences.map((exp: Experience, index: number) => (
         <ExperienceCard key={index}>
           <ExperienceText>
             <h2>{exp.title}</h2>

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { FaUserCircle } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaUserCircle, FaBriefcase } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import {
   TopMenuContainer,
@@ -15,12 +15,12 @@ import {
 const options = [
   {
     title: "About Me",
-    icon: <FaUserCircle size={24} />,
+    icon: <FaUserCircle />,
     screen: "./",
   },
   {
     title: "Portfolio",
-    icon: <FaUserCircle size={24} />,
+    icon: <FaBriefcase />,
     screen: "./portafolio",
   },
 ];
@@ -28,6 +28,19 @@ const options = [
 export default function TopMenu() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const navigate = useNavigate();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   function onclickHandler(index: number, screen: string) {
     setSelectedIndex(index);
     navigate(screen);
@@ -51,7 +64,7 @@ export default function TopMenu() {
   }
 
   return (
-    <TopMenuContainer>
+    <TopMenuContainer isScrolled={isScrolled}>
       <TopMenuLogo>
         <TopMenuLogoText>NachoCisss Dev</TopMenuLogoText>
       </TopMenuLogo>
