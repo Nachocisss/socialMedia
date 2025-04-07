@@ -38,7 +38,6 @@ export default function ProjectCard({
           <ProjectCardUserSubName> {date}</ProjectCardUserSubName>
         </div>
         <ProjectCardContentDescription>{content}</ProjectCardContentDescription>
-
         {image ? (
           <ProjectCardContentImageContainer>
             <Carousel images={image} />

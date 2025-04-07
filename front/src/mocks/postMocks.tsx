@@ -1,5 +1,6 @@
 import MyAppv1 from "../assets/MyAppv1.png";
-import MyAppv2 from "../assets/MyAppv2.png";
+import MyAppv21 from "../assets/MyAppv21.png";
+import MyAppv22 from "../assets/MyAppv22.png";
 export const postMocks = [
   {
     username: "NachoCisss Dev",
@@ -8,7 +9,7 @@ export const postMocks = [
     content: "¡Version número 2 de My CV App! 👨🏻‍💻🚀 #MyApp",
     likes: "40",
     comments: "23",
-    image: [MyAppv2],
+    image: [MyAppv21, MyAppv22],
   },
   {
     username: "NachoCisss Dev",
